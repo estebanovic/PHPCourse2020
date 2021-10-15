@@ -5,6 +5,23 @@
  * Time: 9:49 AM
  */
 
+// 1. Print the whole $_GET using var_dump
+echo '<pre>';
+var_dump($_GET);
+echo '</pre>';
+
+// 2. Get the keyword from $_GET and print
+$keyword = $_GET['keyword'];
+echo $keyword.'<br>';
+
+// 3. Check if the keyword isset in $_GET
+$keyword = '';
+if (isset($_GET['keyword'])) {
+    $keyword = $_GET['keyword'];
+}
+
+// 4. Set the keyword back in search input
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -16,9 +33,9 @@
   <title>Document</title>
 </head>
 <body>
-<form action="" method="get">
+<form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="get">
   <input type="text" name="keyword"
-         placeholder="Type and hit enter">
+         placeholder="Type and hit enter" value="<?php echo $keyword ?>">
   <button>Search</button>
 </form>
 </body>
