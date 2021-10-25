@@ -1,0 +1,17 @@
+{
+    "name": "esteban/16_autoloading",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Esteban Obilinovic",
+            "email": "e.obilinovic@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^2.3"
+    }
+}
